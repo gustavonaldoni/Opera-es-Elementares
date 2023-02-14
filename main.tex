@@ -1,0 +1,145 @@
+\documentclass[14pt, aspectratio=169]{beamer}
+
+\usetheme{Copenhagen}
+\setbeamertemplate{navigation symbols}{} % Esconde as barras de navegação inferiores
+\setbeamercovered{transparent}
+\setbeamertemplate{headline}{} % Esconde a barra de navegação no topo do documento, relativa às seções
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+
+\newcommand{\conj}[1]{\left\{ #1 \right\}}
+
+\newcommand{\skipframe}{\vspace{10.0cm}}
+
+\newtheorem{theo}{Teorema}
+\newtheorem{ex}{Exemplo}
+
+\input{pacotes.tex}
+
+\title{Operações elementares}
+\subtitle{Pré-cálculo}
+\author{Prof. Dr. Márcio Leandro Gonçalves}
+\date{\today}
+\institute{PUC Minas - Poços de Caldas}
+
+\begin{document}
+
+\begin{frame}
+\maketitle 
+\end{frame}
+
+\begin{frame}{Sumário}
+    \tableofcontents
+\end{frame}
+
+\section{Potenciação}
+
+\begin{frame}[allowframebreaks]{Potenciação}
+
+\begin{itemize}
+    \item Definição: $a^n = \underbrace{a \cdot a \cdots a}_{n \text{ vezes}} = b$, em que $a, n, b \in \R$.
+    \begin{itemize}
+        \item $a \rightarrow$ base.
+        \item $n \rightarrow$ expoente.
+        \item $b \rightarrow$ potência.
+    \end{itemize}
+
+    \skipframe
+
+    \item Base positiva $\xrightarrow{\text{gera}}$ potência positiva.
+
+    \begin{itemize}
+        \item Exemplo: $ \left( \dfrac{2}{3} \right) = \dfrac{2^4}{3^4} = \dfrac{16}{81}$
+    \end{itemize}
+
+    \skipframe
+
+    \item Base negativa:
+
+    \begin{enumerate}[a]
+        \item expoente par: potência positiva.
+
+        \begin{itemize}
+            \item Exemplo: $(-3)^4 = (-3) \cdot (-3) \cdot (-3) \cdot (-3) = 3^4 = 81$
+        \end{itemize}
+        
+        \item expoente ímpar: potência negativa.
+
+        \begin{itemize}
+            \item Exemplo: $\left( -\dfrac{1}{2} \right) = \left( -\dfrac{1}{2} \right) \cdot \left( -\dfrac{1}{2} \right) \cdot \left( -\dfrac{1}{2} \right) = - \left(\dfrac{1}{2} \right)^3 = - \dfrac{1}{8}$
+        \end{itemize}
+    \end{enumerate}
+
+    \skipframe
+
+    \item Propriedades:
+
+    \begin{enumerate}[a]
+        \item Produto de potências de mesma base:
+            \begin{equation*}
+                a^m \cdot a^n = a^{m + n} \text{, com } a,m,n \in \R.
+            \end{equation*}
+            
+        \item Quociente de potências de mesma base:
+        \begin{equation*}
+        \label{p2}
+            \dfrac{a^m}{a^n} = a^{m - n} \text{, com } a,m,n \in \R \text{ e } a \neq 0. 
+        \end{equation*}
+
+        \skipframe
+
+        \item Potência de potência:
+        \begin{equation*}
+            \left( a^m \right)^n = a^{m \cdot n} \text{, com } a,m,n \in \R.
+        \end{equation*}
+
+        \item Potência de um produto:
+        \begin{equation*}
+            \left( a \cdot b \right)^n = a^n \cdot b^n \text{, com } a,b,n \in \R.
+        \end{equation*}
+
+        \skipframe
+
+        \item Potência de um quociente:
+        \begin{equation*}
+            \left( \dfrac{a}{b} \right) = \dfrac{a^n}{b^n} \text{, com } a,b,n \in \R \text{ e } b \neq 0.
+        \end{equation*}
+
+        \item Potência com expoente negativo:
+        \begin{equation*}
+            \left( a^{-n} \right) = \dfrac{1}{a^n} \text{, com } a,n \in \R \text{ e } a \neq 0.
+        \end{equation*}
+
+        \skipframe
+
+        \item Potência com expoente 0:
+        \begin{equation*}
+            a^0 = 1 \text{, com } a \in \R \text{ e } a \neq 0.
+        \end{equation*}
+
+        \begin{proof}
+            Seja $a$ e $n$ números reais quaisquer tal que $a \neq 0$. Sabe-se que a expressão $a^n / a^n$ é igual a 1. Usando a propriedade \ref{p2} têm-se que $a^n / a^n = a^{n-n} = a^0$, o que, pela sentença anterior, equivale a 1.
+        \end{proof}
+        
+    \end{enumerate}
+
+    
+    
+    
+\end{itemize}
+    
+\end{frame}
+
+\section{Radiciação}
+
+\section{Logaritmação}
+
+\section{Exercícios}
+
+\section{Respostas dos exercícios}
+
+\end{document}
