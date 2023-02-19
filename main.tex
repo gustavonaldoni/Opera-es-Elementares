@@ -12,8 +12,8 @@
 \newcommand{\N}{\mathbb{N}}
 
 \newcommand{\conj}[1]{\left\{ #1 \right\}}
-
 \newcommand{\skipframe}{\vspace{10.0cm}}
+\newcommand{\parenthesis}[1]{\left( #1 \right)}
 
 \newtheorem{theo}{Teorema}
 \newtheorem{ex}{Exemplo}
@@ -61,13 +61,13 @@
     \item Base negativa:
 
     \begin{enumerate}[a]
-        \item expoente par: potência positiva.
+        \item expoente par $\xrightarrow{\text{gera}}$ potência positiva.
 
         \begin{itemize}
             \item Exemplo: $(-3)^4 = (-3) \cdot (-3) \cdot (-3) \cdot (-3) = 3^4 = 81$
         \end{itemize}
         
-        \item expoente ímpar: potência negativa.
+        \item expoente ímpar $\xrightarrow{\text{gera}}$ potência negativa.
 
         \begin{itemize}
             \item Exemplo: $\left( -\dfrac{1}{2} \right) = \left( -\dfrac{1}{2} \right) \cdot \left( -\dfrac{1}{2} \right) \cdot \left( -\dfrac{1}{2} \right) = - \left(\dfrac{1}{2} \right)^3 = - \dfrac{1}{8}$
@@ -126,20 +126,324 @@
         \end{proof}
         
     \end{enumerate}
-
-    
-    
-    
 \end{itemize}
     
 \end{frame}
 
 \section{Radiciação}
 
+\begin{frame}[allowframebreaks]{Radiciação}
+    \begin{itemize}
+        \item A radiciação é a operação inversa da potenciação.
+        \item Por definição, a raiz representa a potenciação como expoente fracionário:
+
+        \begin{equation*}
+            \sqrt[n]{x} = x^{\frac{1}{n}} \text{, com } x, n \in \R \text{ e } n \neq 0.
+        \end{equation*}
+
+        \item É muito utilizada na obtenção de soluções de equações e na simplificação de expressões aritméticas e algébricas.
+
+        \skipframe
+
+        \item Dados $x \in \R$ tal que $x \geq 0$ e $n \in \N$ com $n \geq 1$, chama-se \emph{raiz enésima} de $x$ o número $y \in \R$, $y \geq 0$ tal que $y^n = x$:
+
+        \begin{equation*}
+            \sqrt[n]{x} = y \Leftrightarrow x = y^n
+        \end{equation*}
+
+        \begin{itemize}
+            \item $n$: índice
+            \item $x$: radicando
+            \item $y$: raiz
+            \item $\sqrt{}$: radical
+        \end{itemize}
+
+        \skipframe
+
+        \item Propriedades:
+
+        \begin{enumerate}[a]
+            \item $a^{\frac{m}{n}} = \sqrt[n]{a^m} \text{, com } a \in \R, n \in \N^* \text{ e } m \in \Z$.
+            \item $\sqrt[n]{a} \cdot \sqrt[n]{b} = \sqrt[n]{a \cdot b} \text{, com } a, b \in \R_+$.  
+            \item $\dfrac{\sqrt[n]{a}}{\sqrt[n]{b}} = \sqrt[n]{\dfrac{a}{b}} \text{, com } a, b \in \R_+ \text{ e } b \neq 0$.
+            \item $\left( \sqrt[n]{a} \right)^m = \sqrt[n]{a^m} \text{, com } a \in \R_+$.
+            \item $\sqrt[n]{\sqrt[m]{a}} = \sqrt[mn]{a} \text{, com } a \in \R_+$.
+        \end{enumerate}
+    \end{itemize}
+\end{frame}
+
 \section{Logaritmação}
+
+\begin{frame}[allowframebreaks]{Logaritmação}
+    \begin{itemize}
+        \item Os logaritmos facilitam cálculos mais complexos.
+        \item Através de suas definições podemos transformar multiplicações em adições, divisões em subtrações, potenciações em multiplicações e radiciações em divisões.
+
+        \skipframe
+
+        \item Dados dois números reais positivos $a$ e $b$, onde $a > 1$ e $b > 0$, existe somente um número real $x$ de modo que:
+
+        \begin{equation*}
+            \log_a(b) = x \Leftrightarrow a^x = b
+        \end{equation*}
+
+        \begin{itemize}
+            \item $a$ = base do logaritmo
+            \item $b$ = logaritmando
+            \item $x$ = logaritmo de $b$ na base $a$
+        \end{itemize}
+
+        \skipframe
+
+        \item Logaritmo é uma função $f: \R_+^* \rightarrow \R$. Os números negativos e o zero não tem logaritmo em $R$.
+
+        \item Logaritmo é a função inversa da função exponencial $y = a^x$.
+
+        \skipframe
+
+        \item Exemplos:
+
+        \begin{enumerate}[a]
+            \begin{multicols}{2}
+                \item $\log_2 16 = ?$
+                    \begin{align*}
+                        \log_2 16 &= x \\
+                        2^x &= 16 \\
+                        2^x &= 2^4 \\
+                        x &= 4
+                    \end{align*}
+
+                \item $\log_{13} 169 = ?$
+                    \begin{align*}
+                        \log_{13} 169 &= x \\
+                        13^x &= 169 \\
+                        13^x &= 13^2 \\
+                        x &= 2
+                    \end{align*}
+            \end{multicols}
+
+        \skipframe
+        \end{enumerate}
+
+    \item Propriedades:
+
+        \begin{enumerate}[a]
+            \item $a^{\log_a x} = x$ ($\log$ é a função inversa de $a^x$) 
+            \item $\log_a 1 = 0$
+            \item $\log_a a = 1$
+
+            \skipframe
+            
+            \item $\log_a (b \cdot c) = \log_a b + \log_a c$
+            \item $\log_a \left( \dfrac{b}{c} \right) = \log_a b - \log_a c$
+            \item $\log_a b^n = n \cdot \log_a b$
+            \item $\log_a \sqrt[n]{b} = \log_a b^{1/n} = \dfrac{1}{n} \cdot \log_a b$
+        \end{enumerate}
+
+        \skipframe
+             
+        \item Logaritmo decimal:
+
+        \begin{itemize}
+            \item É aquele cuja base é 10.
+            \item São tabelados e também constam nos programas das máquinas de calcular.
+            \item Notação: $\log b$ (omite-se a base).
+        \end{itemize}
+
+        \skipframe
+
+        \item Exemplos:
+
+        \begin{itemize}
+            \item $\log 5 \approx 0,69897$
+            \item $\log 50 \approx 1,69897$
+            \item $\log 500 \approx 2,69897$
+        \end{itemize}
+
+        \item Note que a parte fracionária (\emph{mantissa}) é, no caso, aproximadamente $0,69897$, e a parte inteira (\emph{característica}) é dada por $n - 1$, onde $n \in \N$ e representa o número de algarismos da parte inteira do logaritmando.
+
+        \skipframe
+
+        \item Logaritmo natural (neperiano):
+
+        \begin{itemize}
+            \item É aquele cuja base é $e$ (número de Euler).
+            \item $e$ é um número irracional, assim como $\pi$ e $\phi$.
+            \item $e \approx 2,718281828$.
+            \item Notação: $\ln x = \log_e x$
+        \end{itemize}
+    \end{itemize}
+\end{frame}
 
 \section{Exercícios}
 
+\begin{frame}[allowframebreaks]{Exercícios}
+    \begin{enumerate}
+        \item Simplifique as expressões abaixo:
+
+        \begin{multicols}{2}
+            \begin{enumerate}[a]
+                \item $\parenthesis{x^2}^3 \parenthesis{x^{-2}}^4$
+                \item $\parenthesis{\dfrac{\parenthesis{xy}^5}{2^{-3}}}^{-3}$
+                \item $\parenthesis{\dfrac{1}{x^{-2}}} \parenthesis{x^0}^7$
+                \item $x^3 y^2 \parenthesis{\dfrac{y}{x^3}} \parenthesis{\dfrac{x^{-1}}{y^3}}$
+                \item $\parenthesis{2x}^3 \parenthesis{xy}^2 \parenthesis{\dfrac{y}{x}}^5$
+            \end{enumerate}
+        \end{multicols}
+
+        \skipframe
+
+        \item Simplifique as expressões abaixo:
+
+        \begin{multicols}{2}
+            \begin{enumerate}[a]
+                \item $x^{\parenthesis{- \frac{1}{7}}^7} \sqrt{x^8}$
+                \item $\sqrt[5]{x^2} x^{\frac{3}{5}}$
+                \item $\sqrt[n]{x} \sqrt[n]{y} \dfrac{1}{\sqrt[n]{x}} \dfrac{1}{\sqrt[n]{y}}$
+                \item $\parenthesis{\sqrt[3]{x} \sqrt[3]{y}}^3$
+                \item $\sqrt[n]{\dfrac{x}{y}} \sqrt[n]{y}$
+                \item $\sqrt{\sqrt[3]{\sqrt{x^6}}}$
+            \end{enumerate}
+        \end{multicols}
+
+        \skipframe
+
+        \item Determine o valor da expressão abaixo:
+
+        \begin{equation*}
+             \dfrac{(-5)^2 - 4^2 + \parenthesis{\frac{1}{5}}^0}{3^{-2} + 1}
+        \end{equation*}
+
+        \skipframe
+
+        \item Simplifique as expressões:
+
+        \begin{multicols}{3}
+            \begin{enumerate}[a]
+                \item $\dfrac{3^{n+2} - 3^n}{3^{n+1} + 3^{n-1}}$
+                \item $\dfrac{2^{2n + 1} - 4^n}{2^{2n}}$
+                \item $\dfrac{2^{n + 1} - 2^{n-2}}{2^n}$
+            \end{enumerate}
+        \end{multicols}
+
+        \skipframe
+
+        \item Calcule:
+
+        \begin{multicols}{2}
+            \begin{enumerate}[a]
+                \item $\log 0,01$
+                \item $\log 1000$
+                \item $2 \log_2 8 - \log_4 16$
+                \item $\log_2 \dfrac{\sqrt{32}}{\sqrt[3]{64}}$
+                \item $\log_9 3 \sqrt{3}$
+                \item $3 \ln e^3 - \ln e^4$
+            \end{enumerate}
+        \end{multicols}
+
+        \skipframe
+
+        \item Sendo $\log a = 11, \log b = 0,5$ e $\log c = 6$, calcule $x$ sabendo que:
+        
+        \begin{equation*}
+            \log \parenthesis{\dfrac{ab^2}{\sqrt[3]{c}}} = x
+        \end{equation*}
+
+        \skipframe
+
+        \item \cite{fme02} Calcule o valor de $S$:
+
+        \begin{equation*}
+            S = \log_4 \parenthesis{\log_3 9} + \log_2 \parenthesis{\log_{81} 3} + \log_{0,8} \parenthesis{\log_{16} 32}
+        \end{equation*}
+
+        \skipframe
+
+        \item \cite{fme02} As indicações $R_1$ e $R_2$, na escala Richter, de dois terremotos estão relacionadas pela fórmula
+        \begin{equation*}
+            R_1 - R_2 = \log \parenthesis{\dfrac{M_1}{M_2}}
+        \end{equation*}
+
+        em que $M_1$ e $M_2$ medem a energia liberada pelos terremotos sob a forma de ondas que se propagam pela crosta terrestre. Houve dois terremotos: um correspondente a $R_1 = 8$ e outro correspondente a $R_2 = 6$. Calcule a razão $M_1 / M_2$.
+
+        \skipframe
+
+        \item (Mackenzie - SP) Supondo $\log 2 = 0,3$, a raiz da equação $2 - 40^{6x} = 0$ é:
+
+        \begin{multicols}{2}
+            \begin{enumerate}[a]
+                \item $\dfrac{1}{32}$
+                \item 1
+                \item 6 
+                \item $\dfrac{1}{14}$
+                \item $\dfrac{1}{16}$
+            \end{enumerate}
+        \end{multicols}
+        
+        
+    \end{enumerate}
+\end{frame}
+
 \section{Respostas dos exercícios}
+
+\begin{frame}[allowframebreaks]{Respostas dos exercícios}
+
+\begin{multicols}{3}
+    \begin{enumerate}
+        \item 
+        \begin{enumerate}[a]
+            \item $\dfrac{1}{x^2}$
+            \item $\dfrac{1}{512x^{15}y^{15}}$
+            \item $x^8$
+            \item $\dfrac{1}{x}$
+            \item $8y^7$
+        \end{enumerate}
+
+        \item 
+        \begin{enumerate}[a]
+            \item $x$
+            \item $x$
+            \item 1
+            \item xy
+            \item $x^{\frac{1}{n}}$
+            \item $x^{\frac{1}{2}}$
+        \end{enumerate}
+
+        \item 9
+        
+        \item 
+        \begin{enumerate}[a]
+            \item $\frac{12}{5}$
+            \item 1
+            \item $\frac{7}{4}$
+        \end{enumerate}
+
+        \item 
+        \begin{enumerate}[a]
+            \item -2
+            \item 3
+            \item 4
+            \item $\frac{1}{2}$
+            \item $\frac{3}{4}$
+            \item 2
+        \end{enumerate}
+
+        \item 10
+
+        \item $- \frac{5}{2}$
+
+        \item 100
+
+        \item A
+        
+    \end{enumerate}
+\end{multicols}
+\end{frame}
+
+\section{Referências bibliográficas}
+
+\begin{frame}{Referências bibliográficas}
+    \bibliography{referencias}
+\end{frame}
 
 \end{document}
